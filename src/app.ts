@@ -5,7 +5,6 @@ import cors from 'cors';
 const prisma = new PrismaClient();
 const app = express();
 
-// Configurar o CORS
 app.use(cors());
 
 app.get('/numero-jogo-do-bicho', async (req: Request, res: Response) => {
