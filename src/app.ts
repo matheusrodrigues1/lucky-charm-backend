@@ -10,6 +10,10 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 
+app.get('/', (req: Request, res: Response) => {
+  res.send('Bem-vindo ao meu aplicativo!');
+});
+
 app.get('/numero-jogo-do-bicho', async (req: Request, res: Response) => {
   try {
     const numeros = await prisma.jogoDoBicho.findMany();
