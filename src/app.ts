@@ -4,6 +4,7 @@ import cors from 'cors';
 
 const prisma = new PrismaClient();
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 
@@ -70,6 +71,6 @@ async function seedDatabase() {
 
 seedDatabase().catch(console.error);
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Servidor em execução na porta 3000');
 })
