@@ -13,7 +13,7 @@ app.get('/numero-jogo-do-bicho', async (req: Request, res: Response) => {
     const numeros = await prisma.jogoDoBicho.findMany();
 
     if (numeros.length === 0) {
-      res.json({ numero: null, nome: null });
+      res.json({ numero: null, nome: null } as any);
       return;
     }
 
@@ -21,7 +21,7 @@ app.get('/numero-jogo-do-bicho', async (req: Request, res: Response) => {
     const numero = numeros[numeroAleatorio].numero;
     const nome = numeros[numeroAleatorio].nome;
 
-    res.json({ numero, nome });
+    res.json({ numero: numero as number, nome: nome as string });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Ocorreu um erro no servidor' });
