@@ -1,2 +1,103 @@
 node_modules
 # Keep environment variables out of version control
+heroku logs --tail -a lucky-charm
+2023-06-15T14:59:02.721396+00:00 app[web.1]: > npx ts-node src/app.ts
+2023-06-15T14:59:02.721396+00:00 app[web.1]:
+2023-06-15T14:59:04.847424+00:00 app[web.1]: /app/node_modules/ts-node/src/index.ts:859  
+2023-06-15T14:59:04.847446+00:00 app[web.1]: return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+2023-06-15T14:59:04.847448+00:00 app[web.1]: ^
+2023-06-15T14:59:04.849215+00:00 app[web.1]: TSError: ⨯ Unable to compile TypeScript:    
+2023-06-15T14:59:04.849218+00:00 app[web.1]: src/app.ts(3,18): error TS7016: Could not find a declaration file for module 'cors'. '/app/node_modules/cors/lib/index.js' implicitly has an 'any' type.
+2023-06-15T14:59:04.849219+00:00 app[web.1]: Try `npm i --save-dev @types/cors` if it exists or add a new declaration (.d.ts) file containing `declare module 'cors';`
+2023-06-15T14:59:04.849219+00:00 app[web.1]:
+2023-06-15T14:59:04.849220+00:00 app[web.1]: at createTSError (/app/node_modules/ts-node/src/index.ts:859:12)
+2023-06-15T14:59:04.849220+00:00 app[web.1]: at reportTSError (/app/node_modules/ts-node/src/index.ts:863:19)
+2023-06-15T14:59:04.849220+00:00 app[web.1]: at getOutput (/app/node_modules/ts-node/src/index.ts:1077:36)
+2023-06-15T14:59:04.849221+00:00 app[web.1]: at Object.compile (/app/node_modules/ts-node/src/index.ts:1433:41)
+2023-06-15T14:59:04.849221+00:00 app[web.1]: at Module.m._compile (/app/node_modules/ts-node/src/index.ts:1617:30)
+2023-06-15T14:59:04.849221+00:00 app[web.1]: at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+2023-06-15T14:59:04.849223+00:00 app[web.1]: at Object.require.extensions.<computed> [as .ts] (/app/node_modules/ts-node/src/index.ts:1621:12)
+2023-06-15T14:59:04.849224+00:00 app[web.1]: at Module.load (node:internal/modules/cjs/loader:1117:32)
+2023-06-15T14:59:04.849224+00:00 app[web.1]: at Function.Module._load (node:internal/modules/cjs/loader:958:12)
+2023-06-15T14:59:04.849226+00:00 app[web.1]: at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
+2023-06-15T14:59:04.849227+00:00 app[web.1]: diagnosticCodes: [ 7016 ]
+2023-06-15T14:59:04.849227+00:00 app[web.1]: }
+2023-06-15T14:59:04.866248+00:00 app[web.1]: npm notice
+2023-06-15T14:59:04.866323+00:00 app[web.1]: npm notice New minor version of npm available! 9.5.1 -> 9.7.1
+2023-06-15T14:59:04.866637+00:00 app[web.1]: npm notice Changelog: <https://github.com/npm/cli/releases/tag/v9.7.1>
+2023-06-15T14:59:04.866678+00:00 app[web.1]: npm notice Run `npm install -g npm@9.7.1` to update!
+2023-06-15T14:59:04.866819+00:00 app[web.1]: npm notice
+2023-06-15T14:59:05.059098+00:00 heroku[web.1]: Process exited with status 1
+2023-06-15T14:59:05.111305+00:00 heroku[web.1]: State changed from starting to crashed   
+2023-06-15T15:00:43.615045+00:00 app[api]: Release v9 created by user carlosmatheuscarlos99@hotmail.com
+2023-06-15T15:00:43.615045+00:00 app[api]: Set DATABASE_URL config vars by user carlosmatheuscarlos99@hotmail.com
+2023-06-15T15:00:44.198645+00:00 heroku[web.1]: State changed from crashed to starting   
+2023-06-15T15:00:51.623303+00:00 heroku[web.1]: Starting process with command `npm start`
+2023-06-15T15:00:53.827718+00:00 app[web.1]:
+2023-06-15T15:00:53.827747+00:00 app[web.1]: > backend@1.0.0 start
+2023-06-15T15:00:53.827748+00:00 app[web.1]: > npx ts-node src/app.ts
+2023-06-15T15:00:53.827748+00:00 app[web.1]:
+2023-06-15T15:00:55.911434+00:00 app[web.1]: /app/node_modules/ts-node/src/index.ts:859  
+2023-06-15T15:00:55.911459+00:00 app[web.1]: return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+2023-06-15T15:00:55.911460+00:00 app[web.1]: ^
+2023-06-15T15:00:55.913001+00:00 app[web.1]: TSError: ⨯ Unable to compile TypeScript:    
+2023-06-15T15:00:55.913007+00:00 app[web.1]: src/app.ts(3,18): error TS7016: Could not find a declaration file for module 'cors'. '/app/node_modules/cors/lib/index.js' implicitly has an 'any' type.
+2023-06-15T15:00:55.913010+00:00 app[web.1]: Try `npm i --save-dev @types/cors` if it exists or add a new declaration (.d.ts) file containing `declare module 'cors';`
+2023-06-15T15:00:55.913010+00:00 app[web.1]:
+2023-06-15T15:00:55.913011+00:00 app[web.1]: at createTSError (/app/node_modules/ts-node/src/index.ts:859:12)
+2023-06-15T15:00:55.913011+00:00 app[web.1]: at reportTSError (/app/node_modules/ts-node/src/index.ts:863:19)
+2023-06-15T15:00:55.913011+00:00 app[web.1]: at getOutput (/app/node_modules/ts-node/src/index.ts:1077:36)
+2023-06-15T15:00:55.913011+00:00 app[web.1]: at Object.compile (/app/node_modules/ts-node/src/index.ts:1433:41)
+2023-06-15T15:00:55.913012+00:00 app[web.1]: at Module.m._compile (/app/node_modules/ts-node/src/index.ts:1617:30)
+2023-06-15T15:00:55.913012+00:00 app[web.1]: at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+2023-06-15T15:00:55.913014+00:00 app[web.1]: at Object.require.extensions.<computed> [as .ts] (/app/node_modules/ts-node/src/index.ts:1621:12)
+2023-06-15T15:00:55.913015+00:00 app[web.1]: at Module.load (node:internal/modules/cjs/loader:1117:32)
+2023-06-15T15:00:55.913015+00:00 app[web.1]: at Function.Module._load (node:internal/modules/cjs/loader:958:12)
+2023-06-15T15:00:55.913016+00:00 app[web.1]: at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
+2023-06-15T15:00:55.913016+00:00 app[web.1]: diagnosticCodes: [ 7016 ]
+2023-06-15T15:00:55.913016+00:00 app[web.1]: }
+2023-06-15T15:00:55.933742+00:00 app[web.1]: npm notice
+2023-06-15T15:00:55.933823+00:00 app[web.1]: npm notice New minor version of npm available! 9.5.1 -> 9.7.1
+2023-06-15T15:00:55.934124+00:00 app[web.1]: npm notice Changelog: <https://github.com/npm/cli/releases/tag/v9.7.1>
+2023-06-15T15:00:55.934169+00:00 app[web.1]: npm notice Run `npm install -g npm@9.7.1` to update!
+2023-06-15T15:00:55.934311+00:00 app[web.1]: npm notice
+2023-06-15T15:00:56.104459+00:00 heroku[web.1]: Process exited with status 1
+2023-06-15T15:00:56.134139+00:00 heroku[web.1]: State changed from starting to crashed   
+2023-06-15T15:01:00.000000+00:00 app[api]: Build started by user carlosmatheuscarlos99@hotmail.com
+2023-06-15T15:01:22.396889+00:00 app[api]: Deploy 69ee38de by user carlosmatheuscarlos99@hotmail.com
+2023-06-15T15:01:22.396889+00:00 app[api]: Release v10 created by user carlosmatheuscarlos99@hotmail.com
+2023-06-15T15:01:22.679851+00:00 heroku[web.1]: State changed from crashed to starting   
+2023-06-15T15:01:23.000000+00:00 app[api]: Build succeeded
+2023-06-15T15:01:26.046370+00:00 heroku[web.1]: Starting process with command `npm start`
+2023-06-15T15:01:27.644380+00:00 app[web.1]:
+2023-06-15T15:01:27.644401+00:00 app[web.1]: > backend@1.0.0 start
+2023-06-15T15:01:27.644402+00:00 app[web.1]: > npx ts-node src/app.ts
+2023-06-15T15:01:27.644402+00:00 app[web.1]:
+2023-06-15T15:01:29.153834+00:00 app[web.1]: /app/node_modules/ts-node/src/index.ts:859  
+2023-06-15T15:01:29.153862+00:00 app[web.1]: return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+2023-06-15T15:01:29.153864+00:00 app[web.1]: ^
+2023-06-15T15:01:29.155418+00:00 app[web.1]: TSError: ⨯ Unable to compile TypeScript:    
+2023-06-15T15:01:29.155421+00:00 app[web.1]: src/app.ts(3,18): error TS7016: Could not find a declaration file for module 'cors'. '/app/node_modules/cors/lib/index.js' implicitly has an 'any' type.
+2023-06-15T15:01:29.155422+00:00 app[web.1]: Try `npm i --save-dev @types/cors` if it exists or add a new declaration (.d.ts) file containing `declare module 'cors';`
+2023-06-15T15:01:29.155422+00:00 app[web.1]:
+2023-06-15T15:01:29.155423+00:00 app[web.1]: at createTSError (/app/node_modules/ts-node/src/index.ts:859:12)
+2023-06-15T15:01:29.155423+00:00 app[web.1]: at reportTSError (/app/node_modules/ts-node/src/index.ts:863:19)
+2023-06-15T15:01:29.155423+00:00 app[web.1]: at getOutput (/app/node_modules/ts-node/src/index.ts:1077:36)
+2023-06-15T15:01:29.155424+00:00 app[web.1]: at Object.compile (/app/node_modules/ts-node/src/index.ts:1433:41)
+2023-06-15T15:01:29.155424+00:00 app[web.1]: at Module.m._compile (/app/node_modules/ts-node/src/index.ts:1617:30)
+2023-06-15T15:01:29.155424+00:00 app[web.1]: at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+2023-06-15T15:01:29.155425+00:00 app[web.1]: at Object.require.extensions.<computed> [as .ts] (/app/node_modules/ts-node/src/index.ts:1621:12)
+2023-06-15T15:01:29.155427+00:00 app[web.1]: at Module.load (node:internal/modules/cjs/loader:1117:32)
+2023-06-15T15:01:29.155427+00:00 app[web.1]: at Function.Module._load (node:internal/modules/cjs/loader:958:12)
+2023-06-15T15:01:29.155435+00:00 app[web.1]: at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
+2023-06-15T15:01:29.155436+00:00 app[web.1]: diagnosticCodes: [ 7016 ]
+2023-06-15T15:01:29.155436+00:00 app[web.1]: }
+2023-06-15T15:01:29.172561+00:00 app[web.1]: npm notice
+2023-06-15T15:01:29.172636+00:00 app[web.1]: npm notice New minor version of npm available! 9.5.1 -> 9.7.1
+2023-06-15T15:01:29.172835+00:00 app[web.1]: npm notice Changelog: <https://github.com/npm/cli/releases/tag/v9.7.1>
+2023-06-15T15:01:29.172878+00:00 app[web.1]: npm notice Run `npm install -g npm@9.7.1` to update!
+2023-06-15T15:01:29.173012+00:00 app[web.1]: npm notice
+2023-06-15T15:01:29.301334+00:00 heroku[web.1]: Process exited with status 1
+2023-06-15T15:01:29.329562+00:00 heroku[web.1]: State changed from starting to crashed   
+2023-06-15T15:01:53.554971+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=lucky-charm-e9d1cf006635.herokuapp.com request_id=5aeacbc5-3263-4b9b-af0c-19901a4f5773 fwd="177.131.236.15" dyno= connect= service= status=503 bytes= protocol=https
+2023-06-15T15:01:54.246128+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=lucky-charm-e9d1cf006635.herokuapp.com request_id=d5bbc51b-ee28-457b-acda-64fc055b3bec fwd="177.131.236.15" dyno= connect= service= status=503 bytes= protocol=https
