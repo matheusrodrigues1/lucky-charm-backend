@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 
-app.get('https://lucky-charm-3dadf6c57ad1.herokuapp.com/numero-jogo-do-bicho', async (req: Request, res: Response) => {
+app.get('/numero-jogo-do-bicho', async (req: Request, res: Response) => {
   try {
     const numeros = await prisma.jogoDoBicho.findMany();
 
@@ -74,5 +74,5 @@ async function seedDatabase() {
 seedDatabase().catch(console.error);
 
 app.listen(port, () => {
-  console.log('Servidor em execução na porta 3000');
+  console.log(`Servidor em execução na porta ${port}`);
 })
