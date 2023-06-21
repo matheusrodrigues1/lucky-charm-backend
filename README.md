@@ -7,11 +7,15 @@
     <a alt="NodeJs">
         <img src="https://img.shields.io/badge/NodeJs-NodeJs-green" />
     </a>
+    <a alt="Prisma">
+        <img src="https://img.shields.io/badge/Express-Express-black" />
+    </a>
     <a alt="PostgreSQL">
         <img alt="Static Badge" src="https://img.shields.io/badge/PostgresSQL-PostgreSQL-white">
     </a>
     <a alt="Prisma">
         <img src="https://img.shields.io/badge/Prisma-Prisma-brightgreen" />
+    </a>
 </p>
 
 <h3>Descrição do Projeto</h3>
